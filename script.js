@@ -31,10 +31,18 @@ $(".saveBtn").on("click", function(){
     let row = $(this).parent()
     let text = row.find("textarea")
     console.log(text.val())
-    
-    
+    localStorage.setItem(num, text.val())    
 })
     
 
-
 //on loading up page should show saved text areas
+function setText(){
+    for(i = 1; i < 10; i++){
+      let text = $(".container").find("#"+ i)
+      console.log(text)
+      text.val(localStorage.getItem(i))
+    }
+    }
+    
+
+setText()
