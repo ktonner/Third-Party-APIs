@@ -26,5 +26,7 @@ else {
 
 //Save button click
 $(".saveBtn").on("click", function(){
-    
-})
+    let num = $(this).attr("id")
+    console.log(num)
+    localStorage.setItem("text-area" + num, $("textarea").val())
+    })
