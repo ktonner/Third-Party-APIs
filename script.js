@@ -28,5 +28,13 @@ else {
 $(".saveBtn").on("click", function(){
     let num = $(this).attr("id")
     console.log(num)
-    localStorage.setItem("text-area" + num, $("textarea").val())
-    })
+    let row = $(this).parent()
+    let text = row.find("textarea")
+    console.log(text.val())
+    
+    
+})
+    
+
+
+//on loading up page should show saved text areas
